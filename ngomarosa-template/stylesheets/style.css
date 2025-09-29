@@ -1,0 +1,335 @@
+/* setting color */
+:root {
+    --blue-main: #096dca;
+    --blue-main-hover: #21507d;
+
+    --default-color: #a1a09a;
+
+    --green-dark-200: #99d3b3;
+    --green-dark-500: #0f6a44;
+
+    --red-dark-200: #f7aaaa;
+    --red-dark-500: #c62828;
+}
+
+
+
+/* reset style */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* starting */
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: var(--default-color);
+    line-height: 23px;
+
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    height: 100vh;
+}
+
+h1, h2 {
+    margin: 25px 0 20px;
+    color: #fff;
+}
+
+p, li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+a {
+    color: var(--blue-main);
+    transition: .3s;
+}
+
+a:hover {
+    color: var(--blue-main-hover);
+}
+
+.link-gray {
+    color: #333;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.link-gray:hover {
+    color: var(--default-color);
+    text-decoration: underline;
+}
+
+
+
+
+
+/* styling */
+
+/* btn */
+.btn {
+    background-color: var(--blue-main);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 30px;
+    transition: .3s;
+    border: none;
+
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.btn-simple {
+    background-color: var(--default-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 30px;
+    transition: .3s;
+    border: none;
+
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.btn-simple:hover,
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.icon-heart {
+    color: red;
+}
+
+.default-list li::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: var(--default-color);
+
+    box-shadow: 0 0 1px 2px;
+}
+
+.links {
+    padding-top: 20px;
+}
+
+.links button,
+.links a {
+    margin-right: 20px;
+}
+
+
+
+/* main */
+
+main section:first-child {
+    height: 330px;
+    overflow: hidden;
+}
+
+main section:last-child {
+    padding: 40px 30px 45px;
+}
+
+main section {
+    background-color: #161615;
+}
+
+main section,
+main section img {
+    width: 100%;
+}
+
+main .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+/* nav */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+main .top > h1 {
+    margin-top: 0;
+}
+
+main .top > h1 span {
+    color: var(--blue-main);
+}
+
+
+
+
+form {
+    margin-top: 10px;
+}
+
+form input {
+    width: 80%;
+}
+
+input {
+    border: none;
+    background-color: var(--default-color);
+    padding: 12px;
+    font-size: 12pt;
+    border-radius: 20px;
+
+    margin-top: 15px;
+}
+
+
+
+
+/* msg */
+.msg-body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.739);
+
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    height: 100vh;
+}
+
+.msg-body > div {
+    width: 90%;
+    text-align: right;
+}
+
+.msg-body .close {
+    font-size: 20px; 
+    color: red;
+    cursor: pointer;
+}
+
+.msg-body .msg {
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 12pt;
+}
+
+.msg-body h3 {
+    margin-bottom: 10px;
+
+}
+
+.msg-body h3 span {
+    margin-right: 10px;
+    font-size: 20px; 
+}
+
+.success {
+    background-color: var(--green-dark-500);
+}
+
+.success h3 span {
+    color: green;
+}
+
+.success h3 {
+    color: var(--green-dark-200);
+}
+
+.error {
+    background-color: var(--red-dark-500);
+}
+
+.error h3 {
+    color: var(--red-dark-200);
+}
+
+.error h3 span {
+    color: red;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+@media(min-width: 500px) {
+
+    main {
+        width: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+}
+
+
+
+
+
+
+@media(min-width: 1200px) {
+
+    main {
+        width: 800px;
+    }
+    
+    main,
+    main section:first-child,
+    main section:last-child {
+        height: 350px;
+    }
+    
+    main section:first-child {
+        width: 380px;
+        float: right;
+    }
+
+    main section:first-child img {
+        width: 100%;
+    }
+
+    main section:last-child {
+        width: 420px;
+    }
+
+
+
+    /* msg */
+    .msg-body > div {
+        width: 600px;
+    }
+
+}
