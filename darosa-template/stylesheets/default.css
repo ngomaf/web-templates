@@ -237,7 +237,7 @@ main .posts {
 }
 
 main .posts-densed article {
-    flex: 1 1 200px;
+    flex: 0 1 200px;
 }
 
 
@@ -435,6 +435,12 @@ main .links .btn::after {
         border-radius: 30px;
     }
 
+    main {
+        width: 90%;
+        margin: 0 auto 40px;
+        padding-bottom: 0;
+    }
+
     main section > h2 {
         margin-bottom: 30px;
     }
@@ -446,7 +452,7 @@ main .links .btn::after {
     }
 
     .posts article {
-        flex: 1 1 300px;
+        flex: 1 0 300px;
     }
 
     .handing-icons li {
